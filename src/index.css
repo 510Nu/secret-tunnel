@@ -1,10 +1,154 @@
-#root {
-  width: 35ch;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-form,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e24;
+  color: #e0e0e8;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ffd700;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.error-banner {
+  background-color: #900c3f;
+  color: #ffcdd2;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #c70039;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.card {
+  background-color: #2a2a35;
+  border: 1px solid #444454;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  color: #58a6ff;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.card p {
+  line-height: 1.6;
+  color: #c9d1d9;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 label {
-  display: grid;
-  gap: 0.25rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 0.75rem;
+  background-color: #16161d;
+  border: 1px solid #444454;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"],
+.auth-btn {
+  background-color: #238636;
+  color: #fff;
+}
+
+button[type="submit"]:hover,
+.auth-btn:hover {
+  background-color: #2ea043;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.back-btn,
+.reset-btn {
+  background-color: #484f58;
+  color: #f0f6fc;
+}
+
+.back-btn:hover,
+.reset-btn:hover {
+  background-color: #6e7681;
+}
+
+.token-display {
+  background-color: #16161d;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border: 1px dashed #444454;
+}
+
+.token-display code {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: monospace;
+  color: #ffd700;
+  word-wrap: break-word;
+}
+
+.success-text {
+  color: #56ff94 !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.tunnel-visual {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+  letter-spacing: 5px;
 }
